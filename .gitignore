@@ -1,0 +1,16 @@
+# KiCad
+*.bak
+*.kicad_prl
+*-backups/
+fp-info-cache
+
+# Rescue backup (optional - remove this line if you want to track backups)
+rescue-backup/
+
+# Lock files
+*.lck
+~*.lck
+
+# OS
+.DS_Store
+Thumbs.db
