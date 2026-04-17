@@ -1,8 +1,42 @@
 # Arduino Mega 2560 — KiCad 原理圖繪製練習
 
-## 練習目標
+對照 `MEGA2560_Rev3e_sch.pdf` 與完整 KiCad 參考專案，使用 **KiCad 9.0** 分工繪製 Arduino Mega 2560 Rev3 原理圖。
 
-對照 `MEGA2560_Rev3e_sch.pdf` 參考圖，使用 KiCad 9.0 繪製 Arduino Mega 2560 Rev3 的完整原理圖。
+---
+
+## Repo 結構
+
+```
+kicad/
+├── Arduino_Mega2560_Practice/      ← 學生繪製的空白專案（每人畫一個 Section）
+│   ├── Arduino_Mega2560_Practice.kicad_pro
+│   ├── Arduino_Mega2560_Practice.kicad_sch     (root，4 個子頁框)
+│   ├── Section_01_USB_ATmega16U2.kicad_sch     ← 空白
+│   ├── Section_02_ATmega2560_MCU.kicad_sch     ← 空白
+│   ├── Section_03_Power_Supply.kicad_sch       ← 空白
+│   ├── Section_04_Arduino_Headers.kicad_sch    ← 空白
+│   ├── Arduino_Mega2560_Lib.kicad_sym          ← 專案符號庫（已預掛 footprint）
+│   ├── Arduino_Mega2560_FP.pretty/             ← 自訂 footprint 庫
+│   ├── sym-lib-table                           ← 符號庫掛載設定
+│   └── fp-lib-table                            ← Footprint 庫掛載設定
+│
+├── Arduino_Mega2560_Rev3/          ← 完整參考專案（schematic only，無 PCB layout）
+│   ├── Arduino Mega 2560.kicad_pro
+│   ├── Arduino Mega 2560.kicad_sch             (root)
+│   ├── ATMEGA2560-16AU.kicad_sch
+│   ├── Power.kicad_sch
+│   ├── Headers.kicad_sch
+│   ├── Arduino Mega 2560.kicad_sym
+│   ├── Arduino Mega 2560.pretty/
+│   └── Arduino_Mega2560_Rev3_Schematic.pdf
+│
+├── PPT/                            ← 課程投影片
+├── MEGA2560_Rev3e_sch.pdf          ← 官方參考原理圖
+├── arduino_mega2560_BOM.csv        ← 完整 BOM (62 個位號)
+└── README.md
+```
+
+---
 
 ## 分工架構
 
@@ -15,11 +49,63 @@
 | Page 4 | `Section_03_Power_Supply.kicad_sch` | DC 電源座、NCP1117 5V、LP2985 3.3V、PMOS、LMV358 |
 | Page 5 | `Section_04_Arduino_Headers.kicad_sch` | 所有 Arduino 腳位排針（數位/類比/電源） |
 
-## 符號庫
+---
 
-專案已內建 `Arduino_Mega2560_Lib`，包含所有需要的元件符號，每個符號已預先連結好對應的 Footprint。
+## 開啟專案
 
-開啟專案後，在原理圖編輯器 `Place > Add Symbol`，從 `Arduino_Mega2560_Lib` 選取元件即可。
+1. 啟動 **KiCad 9.0**
+2. `File > Open Project`
+3. 選 `Arduino_Mega2560_Practice/Arduino_Mega2560_Practice.kicad_pro`
+4. 從 Project Manager 雙擊原理圖開啟 Eeschema
+5. 在頁面選擇器切到你負責的 Section 開始繪製
+
+---
+
+## 符號庫 / Footprint 庫使用
+
+### 自動掛載（已設定好，**不需要手動加**）
+
+專案內附的 `sym-lib-table` 與 `fp-lib-table` 已經用 `${KIPRJMOD}` 路徑指向專案資料夾，**只要從 `.kicad_pro` 開啟專案就會自動載入**：
+
+| Library 類型 | 名稱 | 路徑 | 內容 |
+|------|------|------|------|
+| 符號庫 (Symbol) | `Arduino_Mega2560_Lib` | `Arduino_Mega2560_Lib.kicad_sym` | 92 個符號（ATmega2560、ATmega16U2、被動元件、連接器…） |
+| Footprint 庫 | `Arduino_Mega2560_FP` | `Arduino_Mega2560_FP.pretty/` | 4 個自訂 footprint（電源座、針腳、按鍵、Polyfuse） |
+
+> 每個符號已預先連結對應 footprint，**畫原理圖時不需要再指定 footprint**。
+
+### 放置元件
+
+- **Eeschema (原理圖)**: `Place > Add Symbol` (快捷鍵 `A`) → 在 Filter 輸入 `Arduino_Mega2560_Lib:` → 選元件
+- **Pcbnew (Footprint)**: `Place > Add Footprint` (快捷鍵 `A`) → Filter 輸入 `Arduino_Mega2560_FP:`
+
+### 看不到符號庫怎麼辦？
+
+如果 Eeschema 找不到 `Arduino_Mega2560_Lib`：
+
+1. `Preferences > Manage Symbol Libraries`
+2. 切到 **Project Specific Libraries** 頁籤
+3. 確認有一筆 `Arduino_Mega2560_Lib` 指向 `${KIPRJMOD}/Arduino_Mega2560_Lib.kicad_sym`
+4. 若無，按 `+` 新增；如果路徑紅字，KiCad 沒讀到專案 → 確認你是用 `.kicad_pro` 開啟，不要直接開 `.kicad_sch`
+
+Footprint 庫同理：`Preferences > Manage Footprint Libraries > Project Specific Libraries`。
+
+---
+
+## 完整參考原理圖
+
+需要對照已完成的版本時，開 `Arduino_Mega2560_Rev3/Arduino Mega 2560.kicad_pro`，含完整 4 頁 schematic。
+**此參考專案不附 PCB layout** — layout 要自己畫。
+
+或直接看 PDF：`Arduino_Mega2560_Rev3/Arduino_Mega2560_Rev3_Schematic.pdf`、`MEGA2560_Rev3e_sch.pdf`。
+
+---
+
+## BOM
+
+`arduino_mega2560_BOM.csv` 列出 62 個位號（Reference / Value / Description / Footprint），可以對照確認元件數量與規格。
+
+---
 
 ## Git 協作流程
 
@@ -52,17 +138,6 @@ git push origin section/01-usb-atmega16u2
 
 - 每個人只修改**自己負責的 `.kicad_sch` 檔**，不要動到其他人的檔案
 - Root 主頁面 `Arduino_Mega2560_Practice.kicad_sch` 只有 4 個方框，不需要修改
-- 合併後在 KiCad 開啟 `Arduino_Mega2560_Practice.kicad_pro` 就能看到完整原理圖
-
-## 開啟方式
-
-1. 開啟 KiCad 9.0
-2. `File > Open Project` → 選擇 `Arduino_Mega2560_Practice/Arduino_Mega2560_Practice.kicad_pro`
-3. 從 Project Manager 開啟原理圖編輯器
-4. 在頁面選擇器切換到你負責的頁面開始繪製
-
-## 參考資料
-
-- 參考原理圖：`MEGA2560_Rev3e_sch.pdf`
-- 符號庫：`Arduino_Mega2560_Practice/Arduino_Mega2560_Lib.kicad_sym`
-- 自訂 Footprint：`Arduino_Mega2560_Practice/Arduino_Mega2560_FP.pretty/`
+- **不要 commit `.kicad_pcb`**（已被 `.gitignore` 排除），這個練習只做原理圖
+- `*.bak`、`*.kicad_prl`、`*-backups/` 也都已被 ignore
+- 合併後在 KiCad 開 `Arduino_Mega2560_Practice.kicad_pro` 即可看到完整原理圖
