@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
-	(generator "kicad_symbol_editor")
-	(generator_version "9.0")
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
 	(uuid "a1b2c3d4-0001-0000-0000-000000000001")
 	(paper "A4")
 	(title_block
@@ -14,7 +14,6 @@
 		(comment 3 "Symbol library: Arduino_Mega2560_Lib")
 	)
 	(lib_symbols)
-
 	(sheet
 		(at 20 25)
 		(size 90 55)
@@ -22,16 +21,35 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(stroke (width 0.1524) (type solid))
-		(fill (color 0 0 0 0.0000))
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
 		(uuid "a1b2c3d4-0001-0000-0000-000000000002")
 		(property "Sheetname" "Section 01: USB Interface & ATmega16U2"
 			(at 20 24.2 0)
-			(effects (font (size 1.27 1.27)) (justify left bottom))
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
 		)
 		(property "Sheetfile" "Section_01_USB_ATmega16U2.kicad_sch"
 			(at 20 80.8 0)
-			(effects (font (size 1.27 1.27)) (justify left top))
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
 		)
 		(instances
 			(project "Arduino_Mega2560_Practice"
@@ -48,16 +66,35 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(stroke (width 0.1524) (type solid))
-		(fill (color 0 0 0 0.0000))
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
 		(uuid "a1b2c3d4-0001-0000-0000-000000000003")
 		(property "Sheetname" "Section 02: ATmega2560 Main MCU"
 			(at 130 24.2 0)
-			(effects (font (size 1.27 1.27)) (justify left bottom))
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
 		)
 		(property "Sheetfile" "Section_02_ATmega2560_MCU.kicad_sch"
 			(at 130 80.8 0)
-			(effects (font (size 1.27 1.27)) (justify left top))
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
 		)
 		(instances
 			(project "Arduino_Mega2560_Practice"
@@ -74,16 +111,35 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(stroke (width 0.1524) (type solid))
-		(fill (color 0 0 0 0.0000))
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
 		(uuid "a1b2c3d4-0001-0000-0000-000000000004")
 		(property "Sheetname" "Section 03: Power Supply"
 			(at 20 99.2 0)
-			(effects (font (size 1.27 1.27)) (justify left bottom))
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
 		)
 		(property "Sheetfile" "Section_03_Power_Supply.kicad_sch"
 			(at 20 155.8 0)
-			(effects (font (size 1.27 1.27)) (justify left top))
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
 		)
 		(instances
 			(project "Arduino_Mega2560_Practice"
@@ -100,16 +156,35 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(stroke (width 0.1524) (type solid))
-		(fill (color 0 0 0 0.0000))
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
 		(uuid "a1b2c3d4-0001-0000-0000-000000000005")
 		(property "Sheetname" "Section 04: Arduino Headers"
 			(at 130 99.2 0)
-			(effects (font (size 1.27 1.27)) (justify left bottom))
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
 		)
 		(property "Sheetfile" "Section_04_Arduino_Headers.kicad_sch"
 			(at 130 155.8 0)
-			(effects (font (size 1.27 1.27)) (justify left top))
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
 		)
 		(instances
 			(project "Arduino_Mega2560_Practice"
@@ -124,4 +199,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )
