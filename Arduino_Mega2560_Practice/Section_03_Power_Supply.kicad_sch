@@ -3043,12 +3043,6 @@
 		)
 	)
 	(junction
-		(at 111.76 140.97)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "02a09b78-2c45-476b-8e89-87f30c4b8d1c")
-	)
-	(junction
 		(at 78.74 140.97)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3065,6 +3059,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3367dc38-8df6-453c-89e8-db71fe194284")
+	)
+	(junction
+		(at 111.76 140.97)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "47d018da-7524-4ed6-9e8d-6ce864b8eaff")
 	)
 	(junction
 		(at 171.45 58.42)
@@ -5293,28 +5293,28 @@
 			)
 		)
 		(pin "8"
-			(uuid "6d58f8b6-90f2-4521-98a0-d51fa2c9359a")
+			(uuid "6d58f8b6-90f2-4521-98a0-d51fa2c9359b")
 		)
 		(pin "4"
-			(uuid "d04cd951-ed83-4057-82c9-9e020c767cbf")
+			(uuid "d04cd951-ed83-4057-82c9-9e020c767cc0")
 		)
 		(pin "5"
-			(uuid "62eb0de1-91fd-46af-bbbf-702e2540d6af")
+			(uuid "62eb0de1-91fd-46af-bbbf-702e2540d6b0")
 		)
 		(pin "7"
-			(uuid "630ad4a6-1a06-43cc-9f31-eb5252a9ce86")
+			(uuid "630ad4a6-1a06-43cc-9f31-eb5252a9ce87")
 		)
 		(pin "1"
-			(uuid "5e0cdc72-225e-4b38-91aa-331a60ac7cd6")
+			(uuid "5e0cdc72-225e-4b38-91aa-331a60ac7cd7")
 		)
 		(pin "3"
-			(uuid "e2102c14-8c93-444c-85f2-f940d86a7f62")
+			(uuid "e2102c14-8c93-444c-85f2-f940d86a7f63")
 		)
 		(pin "6"
-			(uuid "153697ea-b43c-4f6d-9246-6e4501f50b29")
+			(uuid "153697ea-b43c-4f6d-9246-6e4501f50b2a")
 		)
 		(pin "2"
-			(uuid "92f71c32-4751-4619-8be2-4471c7e068df")
+			(uuid "92f71c32-4751-4619-8be2-4471c7e068e0")
 		)
 		(instances
 			(project "Arduino_Mega2560_Practice"
@@ -6616,28 +6616,28 @@
 			)
 		)
 		(pin "8"
-			(uuid "6d58f8b6-90f2-4521-98a0-d51fa2c9359a")
+			(uuid "6d58f8b6-90f2-4521-98a0-d51fa2c9359c")
 		)
 		(pin "4"
-			(uuid "d04cd951-ed83-4057-82c9-9e020c767cbf")
+			(uuid "d04cd951-ed83-4057-82c9-9e020c767cc1")
 		)
 		(pin "5"
-			(uuid "62eb0de1-91fd-46af-bbbf-702e2540d6af")
+			(uuid "62eb0de1-91fd-46af-bbbf-702e2540d6b1")
 		)
 		(pin "7"
-			(uuid "630ad4a6-1a06-43cc-9f31-eb5252a9ce86")
+			(uuid "630ad4a6-1a06-43cc-9f31-eb5252a9ce88")
 		)
 		(pin "1"
-			(uuid "5e0cdc72-225e-4b38-91aa-331a60ac7cd6")
+			(uuid "5e0cdc72-225e-4b38-91aa-331a60ac7cd8")
 		)
 		(pin "3"
-			(uuid "e2102c14-8c93-444c-85f2-f940d86a7f62")
+			(uuid "e2102c14-8c93-444c-85f2-f940d86a7f64")
 		)
 		(pin "6"
-			(uuid "153697ea-b43c-4f6d-9246-6e4501f50b29")
+			(uuid "153697ea-b43c-4f6d-9246-6e4501f50b2b")
 		)
 		(pin "2"
-			(uuid "92f71c32-4751-4619-8be2-4471c7e068df")
+			(uuid "92f71c32-4751-4619-8be2-4471c7e068e1")
 		)
 		(instances
 			(project "Arduino_Mega2560_Practice"
@@ -6715,28 +6715,28 @@
 			)
 		)
 		(pin "8"
-			(uuid "6d58f8b6-90f2-4521-98a0-d51fa2c9359a")
+			(uuid "6d58f8b6-90f2-4521-98a0-d51fa2c9359d")
 		)
 		(pin "4"
-			(uuid "d04cd951-ed83-4057-82c9-9e020c767cbf")
+			(uuid "d04cd951-ed83-4057-82c9-9e020c767cc2")
 		)
 		(pin "5"
-			(uuid "62eb0de1-91fd-46af-bbbf-702e2540d6af")
+			(uuid "62eb0de1-91fd-46af-bbbf-702e2540d6b2")
 		)
 		(pin "7"
-			(uuid "630ad4a6-1a06-43cc-9f31-eb5252a9ce86")
+			(uuid "630ad4a6-1a06-43cc-9f31-eb5252a9ce89")
 		)
 		(pin "1"
-			(uuid "5e0cdc72-225e-4b38-91aa-331a60ac7cd6")
+			(uuid "5e0cdc72-225e-4b38-91aa-331a60ac7cd9")
 		)
 		(pin "3"
-			(uuid "e2102c14-8c93-444c-85f2-f940d86a7f62")
+			(uuid "e2102c14-8c93-444c-85f2-f940d86a7f65")
 		)
 		(pin "6"
-			(uuid "153697ea-b43c-4f6d-9246-6e4501f50b29")
+			(uuid "153697ea-b43c-4f6d-9246-6e4501f50b2c")
 		)
 		(pin "2"
-			(uuid "92f71c32-4751-4619-8be2-4471c7e068df")
+			(uuid "92f71c32-4751-4619-8be2-4471c7e068e2")
 		)
 		(instances
 			(project "Arduino_Mega2560_Practice"
